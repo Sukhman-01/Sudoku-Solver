@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sukhman's Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="subWrapper">
+        <div class="sidebar">
+          <div>
+            <h1>Game Stats</h1>
+            <br /><br />
+            <p>
+              This Sudoku will take <span id="opCnt">__</span> Steps to
+              complete!
+            </p>
+            <br />
+            <p>So please wait....</p>
+          </div>
+          <div id="result">
+            <!-- <h2>Solving....🔄</h2> -->
+            <!-- <h2>🎉🎉 Puzzle Solved! 🎉🎉</h2> -->
+          </div>
+
+          <div>
+            <p>Designed and developed by</p>
+            <h3>Sukhman Singh</h3>
+            <h4>(Reg. No.: 12006129, Course: B.tech CSE)</h4>
+          </div>
+        </div>
+        <div class="contentRight">
+          <div class="Heading">Sudoku Solver</div>
+          <div class="sudoku_grid">
+            <div id="0" class="grid-item box1"></div>
+            <div id="1" class="grid-item box1"></div>
+            <div id="2" class="grid-item box1"></div>
+            <div id="3" class="grid-item box2"></div>
+            <div id="4" class="grid-item box2"></div>
+            <div id="5" class="grid-item box2"></div>
+            <div id="6" class="grid-item box1"></div>
+            <div id="7" class="grid-item box1"></div>
+            <div id="8" class="grid-item box1"></div>
+            <div id="9" class="grid-item box1"></div>
+            <div id="10" class="grid-item box1"></div>
+            <div id="11" class="grid-item box1"></div>
+            <div id="12" class="grid-item box2"></div>
+            <div id="13" class="grid-item box2"></div>
+            <div id="14" class="grid-item box2"></div>
+            <div id="15" class="grid-item box1"></div>
+            <div id="16" class="grid-item box1"></div>
+            <div id="17" class="grid-item box1"></div>
+            <div id="18" class="grid-item box1"></div>
+            <div id="19" class="grid-item box1"></div>
+            <div id="20" class="grid-item box1"></div>
+            <div id="21" class="grid-item box2"></div>
+            <div id="22" class="grid-item box2"></div>
+            <div id="23" class="grid-item box2"></div>
+            <div id="24" class="grid-item box1"></div>
+            <div id="25" class="grid-item box1"></div>
+            <div id="26" class="grid-item box1"></div>
+            <div id="27" class="grid-item box2"></div>
+            <div id="28" class="grid-item box2"></div>
+            <div id="29" class="grid-item box2"></div>
+            <div id="30" class="grid-item box1"></div>
+            <div id="31" class="grid-item box1"></div>
+            <div id="32" class="grid-item box1"></div>
+            <div id="33" class="grid-item box2"></div>
+            <div id="34" class="grid-item box2"></div>
+            <div id="35" class="grid-item box2"></div>
+            <div id="36" class="grid-item box2"></div>
+            <div id="37" class="grid-item box2"></div>
+            <div id="38" class="grid-item box2"></div>
+            <div id="39" class="grid-item box1"></div>
+            <div id="40" class="grid-item box1"></div>
+            <div id="41" class="grid-item box1"></div>
+            <div id="42" class="grid-item box2"></div>
+            <div id="43" class="grid-item box2"></div>
+            <div id="44" class="grid-item box2"></div>
+            <div id="45" class="grid-item box2"></div>
+            <div id="46" class="grid-item box2"></div>
+            <div id="47" class="grid-item box2"></div>
+            <div id="48" class="grid-item box1"></div>
+            <div id="49" class="grid-item box1"></div>
+            <div id="50" class="grid-item box1"></div>
+            <div id="51" class="grid-item box2"></div>
+            <div id="52" class="grid-item box2"></div>
+            <div id="53" class="grid-item box2"></div>
+            <div id="54" class="grid-item box1"></div>
+            <div id="55" class="grid-item box1"></div>
+            <div id="56" class="grid-item box1"></div>
+            <div id="57" class="grid-item box2"></div>
+            <div id="58" class="grid-item box2"></div>
+            <div id="59" class="grid-item box2"></div>
+            <div id="60" class="grid-item box1"></div>
+            <div id="61" class="grid-item box1"></div>
+            <div id="62" class="grid-item box1"></div>
+            <div id="63" class="grid-item box1"></div>
+            <div id="64" class="grid-item box1"></div>
+            <div id="65" class="grid-item box1"></div>
+            <div id="66" class="grid-item box2"></div>
+            <div id="67" class="grid-item box2"></div>
+            <div id="68" class="grid-item box2"></div>
+            <div id="69" class="grid-item box1"></div>
+            <div id="70" class="grid-item box1"></div>
+            <div id="71" class="grid-item box1"></div>
+            <div id="72" class="grid-item box1"></div>
+            <div id="73" class="grid-item box1"></div>
+            <div id="74" class="grid-item box1"></div>
+            <div id="75" class="grid-item box2"></div>
+            <div id="76" class="grid-item box2"></div>
+            <div id="77" class="grid-item box2"></div>
+            <div id="78" class="grid-item box1"></div>
+            <div id="79" class="grid-item box1"></div>
+            <div id="80" class="grid-item box1"></div>
+          </div>
+
+          <div class="Buttons">
+            <button id="GetPuzzle">Load Puzzle</button>
+            <button id="SolvePuzzle">Solve Puzzle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script2.js"></script>
+  </body>
+</html>

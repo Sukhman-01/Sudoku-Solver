@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 10px;
+    background-color:white;
+    font-family: 'Fragment Mono', monospace;
+}
+
+footer{
+    text-align: center;
+}
+
+.Heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.grid-item{
+    border-radius: 8px;
+    background-color: #3Ded97;
+}
+
+.sudoku_grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    /* flex-direction: row; */
+    max-width: 578px;
+    /* width: 40%; */
+    flex-wrap: wrap;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sudoku_grid div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 40px;
+}
+
+.Buttons{   
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+    margin-bottom: 80px;
+}
+
+#GetPuzzle,#SolvePuzzle{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #5bb8ff;
+    padding: 10px 35px;
+    font-size: 24px;
+    /* border: 1px solid #2d6898; */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px 0px rgba(255, 67, 67, 0.3);
+    margin-right: 10px;
+}
+
+.box1{
+    background-color: #1520A6;
+    border: 2px solid  white;
+}
+
+.box1:hover{
+    background-color: #48aaaD;
+    color: black;
+}
+
+.box2{
+    background-color: #BC5448;
+    border: 2px solid  white;
+}
+.box2:hover{
+    background-color: red;
+}
+
+.box3{
+    background-color: #028a0f;
+    border: 2px solid  white;
+}
+.box3:hover{
+    background-color: #3Ded97;
+    color: black
+}
+
+.subWrapper{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.sidebar{
+    padding: 20px;
+    width: 350px;
+    text-align:center;
+    margin-top: 50px;
+    display: grid;
+}
+
+#opCnt{
+    color: red;
+    font-size: large;
+}
+
+.contentRight{
+    width: auto;
+    margin: 0 auto;
+}
